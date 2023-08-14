@@ -13,9 +13,9 @@ import SwiftUI
 struct BarHajApp: App {
     
     init() {
-        if #unavailable(macOS 13.0) {
+//        if #unavailable(macOS 13.0) {
             @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-        }
+//        }
         load()
     }
     
@@ -92,7 +92,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         let statusBar = NSStatusBar.system
         
-        self.statusBarItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
+        self.statusBarItem = statusBar.statusItem(withLength: 30)
         if darkMode {
             self.statusBarItem.button?.image = NSImage(resource: .menuBarIconDark)
         } else {
