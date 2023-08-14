@@ -13,9 +13,9 @@ import SwiftUI
 struct BarHajApp: App {
     
     init() {
-//        if #unavailable(macOS 13.0) {
+        if #unavailable(macOS 13.0) {
             @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-//        }
+        }
         load()
     }
     
